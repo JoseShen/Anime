@@ -4,7 +4,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var randomRouter = require('./routes/random.js');
+var finderRouter = require('./routes/finder.js');
+
 
 var app = express();
 
@@ -14,7 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// app.set('view engine', 'jade');
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/random', randomRouter);
+app.use('/finder', finderRouter);
 
 module.exports = app;

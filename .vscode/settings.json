@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8af1b2cf-d9f4-4130-84ff-229601966b43/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/AniHome",
+    "appService.deploySubpath": "."
+}

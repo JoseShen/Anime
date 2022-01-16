@@ -1,3 +1,13 @@
+:root {
+  font-size: 16px;
+  --bg-primary:#12181b;
+  --bg-footer: #1a242a;
+  --footer-primary-color: #11161d;
+/* 1a242a */
+  /* #11161d */
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,4 +15,69 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+footer {
+  /* Display */
+
+  /* Dimensions */
+  width: 100%;
+  padding: 2em;
+  margin-bottom: 0px;
+  margin-top: 10em;
+  text-align: center;
+  align-self: center;
+  height: 5em;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  position: absolute;
+  /* Styling */
+  color:white;
+  background-color: var(--footer-primary-color);
+  font: "Overpass";
+}
+
+footer p {
+  color: white;
+}
+
+#logo {
+  background-color: #12181b;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: rgb(36, 26, 126);
+}
+
+.navigation a {
+  padding: 1em;
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
 }

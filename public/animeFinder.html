@@ -1,0 +1,35 @@
+<html>
+
+<script src="javascripts/animeFinder.js"></script>
+
+<head>
+  <title>AniHome</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body onload="getAllAnime()">
+  <div id="container">
+
+    <ul class="navigation">
+      <li><a href="/">Home</a></li>
+      <li><a href="/Random">Random Manga</a></li>
+      <li><a href="/Finder">Anime Finder</a></li>
+    </ul>
+    <h1>Find anime</h1>
+    <div id="list">
+
+      <label for="name">What's your favourite show?:</label>
+
+      <input type="text" id="name" name="name" required
+       minlength="1" maxlength="100" size="10">
+
+       
+       <button onclick="getRecommend()">Submit</button>
+
+       
+      
+    </div>
+  </div>
+</body>
+
+</html>
