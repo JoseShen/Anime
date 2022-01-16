@@ -98,9 +98,9 @@ a:hover {
   grid-template-rows: auto;
   grid-template-areas: 
     "header header header"
-    "cover trailer text "
-    "logoArea . ."
-    "genre genre genre"
+    "cover text trailer "
+    "logoArea logoArea logoArea"
+    "genre . ."
 }
 #nameid {
   grid-area: header;
