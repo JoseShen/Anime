@@ -14,6 +14,7 @@ function getRandom() {
       for (var i = 0; i < 1; i++) {
         console.log(i);
         var listContainer = document.createElement("div")
+        listContainer.id = "ranime"
 
         list.appendChild(listContainer)
 
@@ -38,6 +39,8 @@ function getRandom() {
         let aniListImg = document.createElement("img")
         aniListImg.id = "logo"
         aniListImg.src = "https://anilist.co/img/icons/icon.svg"
+        aniListImg.width = 50
+        aniListImg.height = 50
 
         link.href = `https://anilist.co/anime/${animeData.anilist_id}`
         link.appendChild(aniListImg)

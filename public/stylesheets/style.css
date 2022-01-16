@@ -81,3 +81,40 @@ footer p {
   display: flex;
   flex-flow: column wrap;
 }
+
+ul {
+  list-style-type: none;
+}
+
+#limheight {
+  height: 900px; /*your fixed height*/
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 6;
+}
+
+#foundanime {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+/* #anime {
+  height: 400px;
+} */
+
+#list {
+  display: grid;
+  align-content: center;
+}
+
+#ranime {
+  width: 400px;
+  align-content: flex-start;
+}
+
+button {
+  width: 150px;
+  height: 75px;
+}
