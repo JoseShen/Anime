@@ -10,11 +10,13 @@ function getRandom() {
 
       // Add it to the page
       var list = document.getElementById("list")
-
+      list.style.textAlign = "center"
       for (var i = 0; i < 1; i++) {
         console.log(i);
         var listContainer = document.createElement("div")
         listContainer.id = "ranime"
+        // listContainer.style.textAlign = "center"
+       
 
         list.appendChild(listContainer)
 
@@ -28,6 +30,7 @@ function getRandom() {
         let img = document.createElement("img")
 
         img.src = animeData.cover_image
+        img.id = "cover"
         img.width = 300
         img.height = 400
         listContainer.appendChild(img)
@@ -39,7 +42,7 @@ function getRandom() {
         let aniListImg = document.createElement("img")
         aniListImg.id = "logo"
         aniListImg.src = "https://anilist.co/img/icons/icon.svg"
-        aniListImg.width = 50
+        aniListImg.width = 320
         aniListImg.height = 50
 
         link.href = `https://anilist.co/anime/${animeData.anilist_id}`

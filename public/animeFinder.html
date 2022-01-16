@@ -8,11 +8,12 @@
 </head>
 
 <body onload="getResources()">
+  <img id = "background" src ="https://wallpaper.dog/large/20496040.png">
   <div id="container">
 
     <ul class="navigation">
       <li><a href="/">Home</a></li>
-      <li><a href="/Random">Random Manga</a></li>
+      <li><a href="/Random">Random Anime</a></li>
       <li><a href="/Finder">Anime Finder</a></li>
     </ul>
     <fieldset class="group">
@@ -26,12 +27,19 @@
     <legend>Select the genres</legend>
         <div id="genres"></div>
         <button onclick="getRecommend()">Get Recommendation</button>
+        <button onclick="chooseRandom()">Choose Random Anime</button>
     </fieldset>
-    <button onclick="chooseRandom()">Choose Random Anime</button>
     <div id="found">
       <div id="foundanime"></div>
     </div>
   </div>
+</div>
+
+<div class="footer-container">
+<footer>
+        Site was designed by a group of professional Hentai Connoisseurs
+</footer>
+</div>
 </body>
 
 </html>
