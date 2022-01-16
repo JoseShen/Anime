@@ -2,4 +2,4 @@
 
 npm install
 
-DEBUG=anime:* npm start
+npm start
