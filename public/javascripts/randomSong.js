@@ -1,5 +1,5 @@
 function getRandom() {
-  fetch("https://api.aniapi.com/v1/random/anime/1", {
+  fetch("https://api.aniapi.com/v1/random/song/1", {
     "method": "GET",
     "headers": {}
   })
@@ -23,76 +23,28 @@ function getRandom() {
         let animeData = random.data[i]
 
         let name = document.createElement("h1")
-        name.innerHTML = animeData.titles.en
+        name.innerHTML = animeData.title
         name.id = "nameid"
         listContainer.appendChild(name)
-
-        let img = document.createElement("img")
-
-        img.src = animeData.cover_image
-        img.id = "cover"
-        img.width = 300
-        img.height = 400
-        listContainer.appendChild(img)
-
-
 
         // The Link to the anime
         let link = document.createElement("a")
         let aniListImg = document.createElement("img")
         aniListImg.id = "logo"
-        aniListImg.src = "https://anilist.co/img/icons/icon.svg"
-        aniListImg.width = 320
+        aniListImg.src = "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png"
+        aniListImg.width = 100
         aniListImg.height = 50
 
-        link.href = `https://anilist.co/anime/${animeData.anilist_id}`
+        link.href = animeData.open_spotify_url
         link.appendChild(aniListImg)
 
         listContainer.appendChild(link)
-
-        // The Trailer
-        let trailer = document.createElement("iframe")
-        trailer.width = 420
-        trailer.height = 345
-        trailer.id = "trailer"
-        let trailUrl = animeData.trailer_url
-        trailer.src = trailUrl
-        console.log(animeData.trailer_url);
-        if (trailUrl != undefined) {
-          listContainer.appendChild(trailer)
-        } 
-        else 
-        {
-          let emptySpace = document.createElement("p")
-          emptySpace.width = 420
-          emptySpace.height = 345
-          emptySpace.id = "trailer"
-          listContainer.appendChild(emptySpace)
-        }
-
-
-        // Genre List
-        let genreList = document.createElement("ul")
-        genreList.id = "genre"
-        animeData.genres.forEach(genre => {
-          let genreItem = document.createElement("li")
-          genreItem.innerHTML = genre
-          genreList.appendChild(genreItem)
-        });
 
         // for (let i = 0; i < genre.length; i++) {
         //   genrediv.appendChild(genre[i])
         //   let br = document.createElement("br")
         //   genrediv.appendChild(br)
         // }
-
-        listContainer.appendChild(genreList)
-
-        //Summary
-        let summary = document.createElement("h3")
-        summary.id = "summaryText"
-        summary.innerHTML = animeData.descriptions.en
-        listContainer.appendChild(summary)
 
         //Start-End Date
 
